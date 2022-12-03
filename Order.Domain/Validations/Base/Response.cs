@@ -2,7 +2,6 @@
 {
     public class Response
     {
-        public List<Report> Report { get; }
         public Response()
         {
             Report = new List<Report>();
@@ -15,18 +14,24 @@
         {
 
         }
+        public List<Report> Report { get; }
+
+        public static Response<T> Ok<T>(T data) => new Response<T>(data);
+        public static Response Ok() => new Response();
+        public static Response Unprocessable(List<Report> reports) => new Response(reports);
+        public static Response Unprocessable(Report report) => new Response(report);
     }
 
-    public class Reponse<T> : Response
+    public class Response<T> : Response
     {
-        public T Data { get; set; }
-        public Reponse()
+        public Response()
         {
 
         }
-        public Reponse(T data, List<Report> reports = null) : base(reports)
+        public Response(T data, List<Report> reports = null) : base(reports)
         {
-            data = data;
+            Data = data;
         }
+        public T Data { get; set; }
     }
 }

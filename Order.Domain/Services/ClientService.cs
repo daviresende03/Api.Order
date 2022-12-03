@@ -2,6 +2,7 @@
 using Order.Domain.Interfaces.Services;
 using Order.Domain.Models;
 using Order.Domain.Validations;
+using Order.Domain.Validations.Base;
 
 namespace Order.Domain.Services
 {
@@ -13,40 +14,42 @@ namespace Order.Domain.Services
             _clientRepository = clientRepository;
         }
 
-        public Task CreateAsync(ClientModel client)
+        public async Task<Response> CreateAsync(ClientModel client)
         {
+            var response = new Response();
+            
             var validation = new ClientValidation();
-            var result = validation.Validate(client);
+            var errors = validation.Validate(client).GetErrors();
 
-            if (!result.IsValid)
-            {
-                foreach(var err in result.Errors)
-                {
-                    
-                }
-            }
+            if (errors.Report.Count > 0)
+                return errors;
 
-            throw new NotImplementedException();
+            await _clientRepository.CreateAsync(client);
+            return response;
         }
 
-        public Task DeleteAsync(int clientId)
+        public async Task<Response> DeleteAsync(int clientId)
         {
-            throw new NotImplementedException();
+            var response = new Response();
+            return response;
         }
 
-        public Task<ClientModel> GetByIdAsync(int clientId)
+        public Task<Response<ClientModel>> GetByIdAsync(int clientId)
         {
-            throw new NotImplementedException();
+            var response = new Response();
+            return response;
         }
 
-        public Task<List<ClientModel>> ListByFiltersAsync(int clientId = 0, string name = null)
+        public Task<Response<List<ClientModel>>> ListByFiltersAsync(int clientId = 0, string name = null)
         {
-            throw new NotImplementedException();
+            var response = new Response();
+            return response;
         }
 
-        public Task UpdateAsync(ClientModel client)
+        public Task<Response> UpdateAsync(ClientModel client)
         {
-            throw new NotImplementedException();
+            var response = new Response();
+            return response;
         }
     }
 }
