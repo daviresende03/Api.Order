@@ -17,7 +17,7 @@ namespace Order.Domain.Validations
                .NotEmpty()
                .EmailAddress(FluentValidation.Validators.EmailValidationMode.AspNetCoreCompatible);
             
-            RuleFor(x => x.phoneNumber)
+            RuleFor(x => x.PhoneNumber)
                .NotNull()
                .NotEmpty()
         }

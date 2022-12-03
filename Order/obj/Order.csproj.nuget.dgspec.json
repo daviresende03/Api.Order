@@ -4,14 +4,82 @@
     "D:\\Repositorio\\VisualStudio\\Order\\Order\\Order.csproj": {}
   },
   "projects": {
-    "D:\\Repositorio\\VisualStudio\\Order\\Order\\Order.csproj": {
+    "D:\\Repositorio\\VisualStudio\\Order\\Order.Application\\Order.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Repositorio\\VisualStudio\\Order\\Order\\Order.csproj",
-        "projectName": "Order",
-        "projectPath": "D:\\Repositorio\\VisualStudio\\Order\\Order\\Order.csproj",
+        "projectUniqueName": "D:\\Repositorio\\VisualStudio\\Order\\Order.Application\\Order.Application.csproj",
+        "projectName": "Order.Application",
+        "projectPath": "D:\\Repositorio\\VisualStudio\\Order\\Order.Application\\Order.Application.csproj",
         "packagesPath": "C:\\Users\\55379\\.nuget\\packages\\",
-        "outputPath": "D:\\Repositorio\\VisualStudio\\Order\\Order\\obj\\",
+        "outputPath": "D:\\Repositorio\\VisualStudio\\Order\\Order.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\55379\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Repositorio\\VisualStudio\\Order\\Order.Domain\\Order.Domain.csproj": {
+                "projectPath": "D:\\Repositorio\\VisualStudio\\Order\\Order.Domain\\Order.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Repositorio\\VisualStudio\\Order\\Order.Domain\\Order.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Repositorio\\VisualStudio\\Order\\Order.Domain\\Order.Domain.csproj",
+        "projectName": "Order.Domain",
+        "projectPath": "D:\\Repositorio\\VisualStudio\\Order\\Order.Domain\\Order.Domain.csproj",
+        "packagesPath": "C:\\Users\\55379\\.nuget\\packages\\",
+        "outputPath": "D:\\Repositorio\\VisualStudio\\Order\\Order.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,6 +112,78 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Repositorio\\VisualStudio\\Order\\Order\\Order.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Repositorio\\VisualStudio\\Order\\Order\\Order.csproj",
+        "projectName": "Order",
+        "projectPath": "D:\\Repositorio\\VisualStudio\\Order\\Order\\Order.csproj",
+        "packagesPath": "C:\\Users\\55379\\.nuget\\packages\\",
+        "outputPath": "D:\\Repositorio\\VisualStudio\\Order\\Order\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\55379\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Repositorio\\VisualStudio\\Order\\Order.Application\\Order.Application.csproj": {
+                "projectPath": "D:\\Repositorio\\VisualStudio\\Order\\Order.Application\\Order.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"

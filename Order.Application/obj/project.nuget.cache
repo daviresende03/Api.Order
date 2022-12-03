@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Q18hCSz7hhizpV0cLMwhmyTD+pjPsvpUsaFZM29NlS352h/fQMtuXE+V9FJMxD1FkOGkAJlUyGaUul0S/zbrkw==",
+  "dgSpecHash": "TWTxfKTz3m5KKSBQdZuwxlVahny2ys++vGvHdGg6NARmAoRORKXsRkYXTEdZyPmoZVvbJIdoQ1xr0beJ4iwvVw==",
   "success": true,
   "projectFilePath": "D:\\Repositorio\\VisualStudio\\Order\\Order.Application\\Order.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\55379\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\55379\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",
+    "C:\\Users\\55379\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }

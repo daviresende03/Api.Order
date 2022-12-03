@@ -1,7 +1,8 @@
-﻿namespace Order.Domain.Models
+﻿namespace Order.Application.DataContract.Response.Client
 {
-    public class ClientModel : BaseEntity
+    public sealed class ClientResponse
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }

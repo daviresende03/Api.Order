@@ -1,6 +1,6 @@
-﻿namespace Order.Domain.Models
+﻿namespace Order.Application.DataContract.Request.Client
 {
-    public class ClientModel : BaseEntity
+    public sealed class CreateClientRequest
     {
         public string Name { get; set; }
         public string Email { get; set; }
