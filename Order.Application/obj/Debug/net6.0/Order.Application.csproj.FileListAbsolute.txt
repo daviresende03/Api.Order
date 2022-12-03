@@ -1,0 +1,15 @@
+D:\Repositorio\VisualStudio\Order\Order.Application\obj\Debug\net6.0\Order.Application.csproj.AssemblyReference.cache
+D:\Repositorio\VisualStudio\Order\Order.Application\obj\Debug\net6.0\Order.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repositorio\VisualStudio\Order\Order.Application\obj\Debug\net6.0\Order.Application.AssemblyInfoInputs.cache
+D:\Repositorio\VisualStudio\Order\Order.Application\obj\Debug\net6.0\Order.Application.AssemblyInfo.cs
+D:\Repositorio\VisualStudio\Order\Order.Application\obj\Debug\net6.0\Order.Application.csproj.CoreCompileInputs.cache
+D:\Repositorio\VisualStudio\Order\Order.Application\bin\Debug\net6.0\Order.Application.deps.json
+D:\Repositorio\VisualStudio\Order\Order.Application\bin\Debug\net6.0\Order.Application.dll
+D:\Repositorio\VisualStudio\Order\Order.Application\bin\Debug\net6.0\Order.Application.pdb
+D:\Repositorio\VisualStudio\Order\Order.Application\bin\Debug\net6.0\Order.Domain.dll
+D:\Repositorio\VisualStudio\Order\Order.Application\bin\Debug\net6.0\Order.Domain.pdb
+D:\Repositorio\VisualStudio\Order\Order.Application\obj\Debug\net6.0\Order.Application.csproj.CopyComplete
+D:\Repositorio\VisualStudio\Order\Order.Application\obj\Debug\net6.0\Order.Application.dll
+D:\Repositorio\VisualStudio\Order\Order.Application\obj\Debug\net6.0\refint\Order.Application.dll
+D:\Repositorio\VisualStudio\Order\Order.Application\obj\Debug\net6.0\Order.Application.pdb
+D:\Repositorio\VisualStudio\Order\Order.Application\obj\Debug\net6.0\ref\Order.Application.dll

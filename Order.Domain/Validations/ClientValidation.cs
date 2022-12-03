@@ -16,10 +16,10 @@ namespace Order.Domain.Validations
                .NotNull()
                .NotEmpty()
                .EmailAddress(FluentValidation.Validators.EmailValidationMode.AspNetCoreCompatible);
-            
+
             RuleFor(x => x.PhoneNumber)
                .NotNull()
-               .NotEmpty()
+               .NotEmpty();
         }
     }
 }
