@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "VRqbm97YVO4S7f+EztSSayzkCHRVJ71iscG6PJOzz402ODkRVwIcAO7POuPYugGhAhs8p1thLEXEo8gjywRmeg==",
+  "dgSpecHash": "balFcCJdrw+TdPNETAjdx5J6z2lRdKlIwfjueTJkOgycaufbN1MfR10U4P3kRvNWr2DicC7KfOz+qDpy4dntWw==",
   "success": true,
   "projectFilePath": "D:\\Repositorio\\VisualStudio\\Order\\Order.Infra\\Order.Infra.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\55379\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512"
+  ],
   "logs": []
 }
