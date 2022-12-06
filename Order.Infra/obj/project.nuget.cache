@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "balFcCJdrw+TdPNETAjdx5J6z2lRdKlIwfjueTJkOgycaufbN1MfR10U4P3kRvNWr2DicC7KfOz+qDpy4dntWw==",
+  "dgSpecHash": "dugMev8TtFHkIp7hYkxl9jHf+tlButIEkYx/+7z8RWXwsCdNkJG2l6F75h/uacofzMViTMxl5T3V1ljLamRqkw==",
   "success": true,
   "projectFilePath": "D:\\Repositorio\\VisualStudio\\Order\\Order.Infra\\Order.Infra.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\55379\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512"
+    "C:\\Users\\55379\\.nuget\\packages\\dapper\\2.0.78\\dapper.2.0.78.nupkg.sha512",
+    "C:\\Users\\55379\\.nuget\\packages\\dapper.contrib\\2.0.78\\dapper.contrib.2.0.78.nupkg.sha512",
+    "C:\\Users\\55379\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",
+    "C:\\Users\\55379\\.nuget\\packages\\mysqlconnector\\2.2.1\\mysqlconnector.2.2.1.nupkg.sha512"
   ],
   "logs": []
 }
