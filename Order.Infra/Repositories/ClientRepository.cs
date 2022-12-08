@@ -52,7 +52,7 @@ namespace Order.Infra.Repositories
 
         public async Task DeleteAsync(int clientId)
         {
-            string sql = @"DELETE FROM CLIENT WHERE ID = @ClientId;";
+            string sql = $"DELETE FROM CLIENT WHERE ID = @ClientId;";
 
             await _dbConnector.dbConnection.ExecuteAsync(sql, new { ClientId = clientId }, _dbConnector.dbTransaction);
         }

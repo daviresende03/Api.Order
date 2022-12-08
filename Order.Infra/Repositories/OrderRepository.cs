@@ -86,21 +86,21 @@ namespace Order.Infra.Repositories
 
         public async Task DeleteAsync(int orderId)
         {
-            string sql = "DELETE FROM ORDER WHERE ID = @OrderId;";
+            string sql = $"DELETE FROM ORDER WHERE ID = @OrderId;";
 
             await _dbConnector.dbConnection.ExecuteAsync(sql, new { OrderId = orderId }, _dbConnector.dbTransaction);
         }
 
         public async Task DeleteItemAsync(int itemId)
         {
-            string sql = "DELETE FROM ORDERITEM WHERE ID = @ItemId;";
+            string sql = $"DELETE FROM ORDERITEM WHERE ID = @ItemId;";
 
             await _dbConnector.dbConnection.ExecuteAsync(sql, new { ItemId = itemId }, _dbConnector.dbTransaction);
         }
 
         public async Task<bool> ExistsByIdAsync(int orderId)
         {
-            string sql = @"SELECT 1 FROM ORDER WHERE ID = @OrderId;";
+            string sql = $"SELECT 1 FROM ORDER WHERE ID = @OrderId;";
 
             var existOrder = await _dbConnector.dbConnection.QueryAsync<bool>(sql, new { OrderId = orderId }, _dbConnector.dbTransaction);
 
