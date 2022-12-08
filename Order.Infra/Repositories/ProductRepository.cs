@@ -5,7 +5,7 @@ using Order.Domain.Models;
 
 namespace Order.Infra.Repositories
 {
-    internal class ProductRepository : IProductRepository
+    public class ProductRepository : IProductRepository
     {
         private readonly IDbConnector _dbConnector;
         const string baseSql = @"SELECT ID,
