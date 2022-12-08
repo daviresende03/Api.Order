@@ -2,7 +2,6 @@
 using Order.Domain.Interfaces.Repositories;
 using Order.Domain.Interfaces.Repositories.DataConnector;
 using Order.Domain.Models;
-using System.Data;
 
 namespace Order.Infra.Repositories
 {
@@ -23,14 +22,39 @@ namespace Order.Infra.Repositories
             _dbConnector = dbConnector;
         }
 
-        public Task CreateAsync(ClientModel client)
+        public async Task CreateAsync(ClientModel client)
         {
-            throw new NotImplementedException();
+            string sql = @"INSERT INTO CLIENT
+                                    (ID,
+                                     NAME,
+                                     EMAIL,
+                                     PHONENUMBER,
+                                     ADRESS,
+                                     CREATEDAT)
+                                  VALUES
+                                    (@Id,
+                                     @Name,
+                                     @Email,
+                                     @PhoneNumber,
+                                     @Adress,
+                                     @CreatedAt);";
+
+            await _dbConnector.dbConnection.ExecuteAsync(sql, new
+            {
+                Id = client.Id,
+                Name = client.Name,
+                Email = client.Email,
+                PhoneNumber = client.PhoneNumber,
+                Adress = client.Adress,
+                CreatedAt = client.CreatedAt
+            }, _dbConnector.dbTransaction);
         }
 
-        public Task DeleteAsync(int clientId)
+        public async Task DeleteAsync(int clientId)
         {
-            throw new NotImplementedException();
+            string sql = @"DELETE FROM CLIENT WHERE ID = @ClientId;";
+
+            await _dbConnector.dbConnection.ExecuteAsync(sql, new { ClientId = clientId }, _dbConnector.dbTransaction);
         }
 
         public async Task<bool> ExistsByIdAsync(int clientId)
@@ -75,9 +99,23 @@ namespace Order.Infra.Repositories
             return clients.ToList();
         }
 
-        public Task UpdateAsync(ClientModel client)
+        public async Task UpdateAsync(ClientModel client)
         {
-            throw new NotImplementedException();
+            string sql = @"UPDATE CLIENT
+                           SET NAME = @Name,
+                               EMAIL = @Email,
+                               PHONENUMBER = @PhoneNumber,
+                               ADRESS = @Adress
+                           WHERE ID = @ClientId";
+
+            await _dbConnector.dbConnection.ExecuteAsync(sql, new
+            {
+                ClientId = client.Id,
+                Name = client.Name,
+                Email = client.Email,
+                PhoneNumber = client.PhoneNumber,
+                Adress = client.Adress,
+            }, _dbConnector.dbTransaction);
         }
     }
 }
