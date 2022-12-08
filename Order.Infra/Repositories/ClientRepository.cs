@@ -62,8 +62,13 @@ namespace Order.Infra.Repositories
             if (!string.IsNullOrWhiteSpace(name))
             {
                 if (!sql.Contains("WHERE"))
+                {
                     sql += " WHERE NAME LIKE @Name";
-                sql += " AND NAME LIKE @Name";
+                }
+                else
+                {
+                    sql += " AND NAME LIKE @Name";
+                }
             }
 
             var clients = await _dbConnector.dbConnection.QueryAsync<ClientModel>(sql, new {Id = id, Name = '%'+name+'%'}, _dbConnector.dbTransaction);
