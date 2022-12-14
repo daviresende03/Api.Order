@@ -75,27 +75,16 @@ namespace Order.Infra.Repositories
             return clients.FirstOrDefault();
         }
 
-        public async Task<List<ClientModel>> ListByFilterAsync(int id = 0, string name = null)
+        public async Task<List<ClientModel>> ListByFilterAsync(string name)
         {
             string sql = $"{baseSql}";
 
-            if(id != 0)
-            {
-                sql += " WHERE ID = @Id";
-            }
             if (!string.IsNullOrWhiteSpace(name))
             {
-                if (!sql.Contains("WHERE"))
-                {
-                    sql += " WHERE NAME LIKE @Name";
-                }
-                else
-                {
-                    sql += " AND NAME LIKE @Name";
-                }
+                sql += " WHERE NAME LIKE @Name";
             }
 
-            var clients = await _dbConnector.dbConnection.QueryAsync<ClientModel>(sql, new {Id = id, Name = '%'+name+'%'}, _dbConnector.dbTransaction);
+            var clients = await _dbConnector.dbConnection.QueryAsync<ClientModel>(sql, new {Name = '%'+name+'%'}, _dbConnector.dbTransaction);
             return clients.ToList();
         }
 

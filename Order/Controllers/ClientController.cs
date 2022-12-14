@@ -16,7 +16,7 @@ namespace Order.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> Get([FromQuery] string name = "")
+        public async Task<IActionResult> Get([FromQuery] string? name = "")
         {
             var response = await _clientApplication.ListByFilterAsync(name: name);
 
@@ -26,7 +26,7 @@ namespace Order.Controllers
             return Ok(response);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public async Task<IActionResult> Get(int id)
         {
             var response = await _clientApplication.GetByIdAsync(id);

@@ -59,21 +59,11 @@ namespace Order.Domain.Services
             return response;
         }
 
-        public async Task<Response<List<ClientModel>>> ListByFiltersAsync(int clientId = 0, string name = null)
+        public async Task<Response<List<ClientModel>>> ListByFiltersAsync(string name)
         {
             var response = new Response<List<ClientModel>>();
-            if(!(clientId == 0))
-            {
-                var exists = await _clientRepository.ExistsByIdAsync(clientId);
 
-                if (!exists)
-                {
-                    response.Report.Add(Report.Create($"Client {clientId} not exists!"));
-                    return response;
-                }
-            }
-
-            response.Data = await _clientRepository.ListByFilterAsync(clientId,name);
+            response.Data = await _clientRepository.ListByFilterAsync(name);
             return response;
         }
 

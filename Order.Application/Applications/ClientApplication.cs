@@ -40,9 +40,9 @@ namespace Order.Application.Applications
             return Response.Ok(response);
         }
 
-        public async Task<Response<List<ClientResponse>>> ListByFilterAsync(int clientId=0, string name="")
+        public async Task<Response<List<ClientResponse>>> ListByFilterAsync(string name)
         {
-            Response<List<ClientModel>> clients = await _clientService.ListByFiltersAsync(clientId, name);
+            Response<List<ClientModel>> clients = await _clientService.ListByFiltersAsync(name);
 
             if (clients.Report.Any())
                 return Response.Unprocessable<List<ClientResponse>>(clients.Report);
