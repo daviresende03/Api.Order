@@ -9,7 +9,7 @@ namespace Order.Domain.Interfaces.Repositories
         IProductRepository ProductRepository { get; }
         IUserRepository UserRepository { get; }
 
-        public IDbConnector dbConnector { get; set; }
+        IDbConnector dbConnector { get; }
 
         void BeginTransaction();
         void CommitTransaction();

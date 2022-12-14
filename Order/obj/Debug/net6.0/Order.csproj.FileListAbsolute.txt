@@ -32,3 +32,8 @@ D:\Repositorio\VisualStudio\Order\Order\obj\Debug\net6.0\Order.pdb
 D:\Repositorio\VisualStudio\Order\Order\obj\Debug\net6.0\Order.genruntimeconfig.cache
 D:\Repositorio\VisualStudio\Order\Order\obj\Debug\net6.0\ref\Order.dll
 D:\Repositorio\VisualStudio\Order\Order\obj\Debug\net6.0\Order.MvcApplicationPartsAssemblyInfo.cs
+D:\Repositorio\VisualStudio\Order\Order\bin\Debug\net6.0\Dapper.dll
+D:\Repositorio\VisualStudio\Order\Order\bin\Debug\net6.0\Dapper.Contrib.dll
+D:\Repositorio\VisualStudio\Order\Order\bin\Debug\net6.0\MySqlConnector.dll
+D:\Repositorio\VisualStudio\Order\Order\bin\Debug\net6.0\Order.Infra.dll
+D:\Repositorio\VisualStudio\Order\Order\bin\Debug\net6.0\Order.Infra.pdb

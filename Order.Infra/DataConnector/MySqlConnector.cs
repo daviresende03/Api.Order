@@ -4,12 +4,11 @@ using System.Data;
 
 namespace Order.Infra.DataConnector
 {
-    internal class MySqlConnector : IDbConnector
+    public class MySqlConnector : IDbConnector
     {
         public IDbConnection dbConnection { get; }
 
-        public IDbTransaction dbTransaction { get; }
-        IDbTransaction IDbConnector.dbTransaction { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public IDbTransaction dbTransaction { get; set; }
 
         public MySqlConnector(string connectionString)
         {

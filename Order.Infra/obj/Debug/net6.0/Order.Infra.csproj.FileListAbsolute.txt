@@ -10,3 +10,6 @@ D:\Repositorio\VisualStudio\Order\Order.Infra\obj\Debug\net6.0\Order.Infra.dll
 D:\Repositorio\VisualStudio\Order\Order.Infra\obj\Debug\net6.0\refint\Order.Infra.dll
 D:\Repositorio\VisualStudio\Order\Order.Infra\obj\Debug\net6.0\Order.Infra.pdb
 D:\Repositorio\VisualStudio\Order\Order.Infra\obj\Debug\net6.0\ref\Order.Infra.dll
+D:\Repositorio\VisualStudio\Order\Order.Infra\bin\Debug\net6.0\Order.Domain.dll
+D:\Repositorio\VisualStudio\Order\Order.Infra\bin\Debug\net6.0\Order.Domain.pdb
+D:\Repositorio\VisualStudio\Order\Order.Infra\obj\Debug\net6.0\Order.Infra.csproj.CopyComplete

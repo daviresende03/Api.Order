@@ -16,15 +16,25 @@ namespace Order.Controllers
 
 
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<IActionResult> Get([FromQuery] string name = "")
         {
-            return new string[] { "value1", "value2" };
+            var response = await _clientApplication.ListByFilterAsync(name: name);
+
+            if (response.Report.Any())
+                return UnprocessableEntity(response.Report);
+
+            return Ok(response);
         }
 
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
-            return "value";
+            var response = await _clientApplication.GetByIdAsync(id);
+
+            if (response.Report.Any())
+                return UnprocessableEntity(response.Report);
+
+            return Ok(response);
         }
 
         [HttpPost]

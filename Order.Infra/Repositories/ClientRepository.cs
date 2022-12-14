@@ -61,7 +61,7 @@ namespace Order.Infra.Repositories
         {
             string sql = $"SELECT 1 FROM CLIENT WHERE ID = @Id";
 
-            var existClient = (await _dbConnector.dbConnection.QueryAsync<bool>(sql, new { Id = "%" + clientId + "%" }, _dbConnector.dbTransaction)).FirstOrDefault();
+            var existClient = (await _dbConnector.dbConnection.QueryAsync<bool>(sql, new { Id = clientId }, _dbConnector.dbTransaction)).FirstOrDefault();
 
             return existClient;
         }
@@ -70,7 +70,7 @@ namespace Order.Infra.Repositories
         {
             string sql = $"{baseSql} WHERE ID = @Id";
             
-            var clients = await _dbConnector.dbConnection.QueryAsync<ClientModel>(sql, new { Id = "%" + clientId + "%" }, _dbConnector.dbTransaction);
+            var clients = await _dbConnector.dbConnection.QueryAsync<ClientModel>(sql, new { Id = clientId }, _dbConnector.dbTransaction);
             
             return clients.FirstOrDefault();
         }

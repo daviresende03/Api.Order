@@ -24,19 +24,32 @@ namespace Order.Application.Applications
             return await _clientService.CreateAsync(clientModel);
         }
 
-        public Task<Response> DeleteAsync(string clientId)
+        public Task<Response> DeleteAsync(int clientId)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Response<ClientResponse>> GetByIdAsync(string clientId)
+        public async Task<Response<ClientResponse>> GetByIdAsync(int clientId)
         {
-            throw new NotImplementedException();
+            Response<ClientModel> responseClientModel = await _clientService.GetByIdAsync(clientId);
+
+            if (responseClientModel.Report.Any())
+                return Response.Unprocessable<ClientResponse>(responseClientModel.Report);
+
+            var response = _mapper.Map<ClientResponse>(responseClientModel.Data);
+            return Response.Ok(response);
         }
 
-        public Task<Response<List<ClientResponse>>> ListByFilterAsync(string clientId, string name)
+        public async Task<Response<List<ClientResponse>>> ListByFilterAsync(int clientId=0, string name="")
         {
-            throw new NotImplementedException();
+            Response<List<ClientModel>> clients = await _clientService.ListByFiltersAsync(clientId, name);
+
+            if (clients.Report.Any())
+                return Response.Unprocessable<List<ClientResponse>>(clients.Report);
+
+            var response = _mapper.Map<List<ClientResponse>>(clients.Data);
+
+            return Response.Ok(response);
         }
 
         public Task<Response> UpdateAsync(UpdateClientRequest request)
