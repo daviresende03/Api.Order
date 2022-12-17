@@ -19,9 +19,16 @@ namespace Order.Application.Applications
         }
         public async Task<Response> CreateAsync(CreateClientRequest client)
         {
-            var clientModel = _mapper.Map<ClientModel>(client);
-
-            return await _clientService.CreateAsync(clientModel);
+            try
+            {
+                var clientModel = _mapper.Map<ClientModel>(client);
+                return await _clientService.CreateAsync(clientModel);
+            }
+            catch(Exception ex)
+            {
+                var response = Report.Create(ex.Message);
+                return Response.Unprocessable(response);
+            }
         }
 
         public Task<Response> DeleteAsync(int clientId)

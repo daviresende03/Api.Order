@@ -1,4 +1,5 @@
-﻿using Order.Domain.Interfaces.Repositories;
+﻿using Order.Domain.Common;
+using Order.Domain.Interfaces.Repositories;
 using Order.Domain.Interfaces.Services;
 using Order.Domain.Models;
 using Order.Domain.Validations;
@@ -9,9 +10,12 @@ namespace Order.Domain.Services
     public class ClientService : IClientService
     {
         private readonly IClientRepository _clientRepository;
-        public ClientService(IClientRepository clientRepository)
+        private readonly ITimeProvider _timeProvider;
+        public ClientService(IClientRepository clientRepository,
+                             ITimeProvider timeProvider)
         {
             _clientRepository = clientRepository;
+            _timeProvider = timeProvider;
         }
 
         public async Task<Response> CreateAsync(ClientModel client)
@@ -24,6 +28,7 @@ namespace Order.Domain.Services
             if (errors.Report.Count > 0)
                 return errors;
 
+            client.CreatedAt = _timeProvider.utcDate();
             await _clientRepository.CreateAsync(client);
             return response;
         }

@@ -12,7 +12,6 @@ builder.Services.AddAutoMapper(typeof(Core));
 builder.Services.AddControllers();
 
 builder.Services.AddScoped<IDbConnector>(db => new Order.Infra.DataConnector.MySqlConnector(connectionString));
-builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.RegisterIoc();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
