@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "y3ofq48cQsECGS2jzbq/DpDEC2M6FrON9aYs4TsWlbbtX8il/Nlpzoc9I/veC2n53puvL9Hcu+VV7/xr60xN6g==",
+  "dgSpecHash": "Sj449z1GGeEM81Q/n9b3B4fvpomW1oUCfTaInAk8SGPLgRTybU5UvB5s/22SWMK/HyxTxQAVhSih96duHnCIgA==",
   "success": true,
   "projectFilePath": "D:\\Repositorio\\VisualStudio\\Order\\Order\\Order.csproj",
   "expectedPackageFiles": [
@@ -17,9 +17,9 @@
     "C:\\Users\\55379\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\55379\\.nuget\\packages\\mysqlconnector\\2.2.1\\mysqlconnector.2.2.1.nupkg.sha512",
     "C:\\Users\\55379\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
-    "C:\\Users\\55379\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
-    "C:\\Users\\55379\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
-    "C:\\Users\\55379\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
+    "C:\\Users\\55379\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\55379\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\55379\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
     "C:\\Users\\55379\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []

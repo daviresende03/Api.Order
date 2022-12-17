@@ -37,3 +37,4 @@ D:\Repositorio\VisualStudio\Order\Order\bin\Debug\net6.0\Dapper.Contrib.dll
 D:\Repositorio\VisualStudio\Order\Order\bin\Debug\net6.0\MySqlConnector.dll
 D:\Repositorio\VisualStudio\Order\Order\bin\Debug\net6.0\Order.Infra.dll
 D:\Repositorio\VisualStudio\Order\Order\bin\Debug\net6.0\Order.Infra.pdb
+D:\Repositorio\VisualStudio\Order\Order\bin\Debug\net6.0\Order.xml

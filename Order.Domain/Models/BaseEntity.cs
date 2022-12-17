@@ -1,5 +1,4 @@
-﻿using System;
-namespace Order.Domain.Models
+﻿namespace Order.Domain.Models
 {
     public abstract class BaseEntity
     {

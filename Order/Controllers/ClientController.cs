@@ -14,7 +14,11 @@ namespace Order.Controllers
             _clientApplication = clientApplication;
         }
 
-
+        /// <summary>
+        /// Get All Clients
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns>Return all clients</returns>
         [HttpGet]
         public async Task<IActionResult> Get([FromQuery] string? name = "")
         {
