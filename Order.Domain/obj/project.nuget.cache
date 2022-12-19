@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "VYPaG2rzM8IAX8rWEPgzABoeW8dR5TrWm77PKuhex+9ZWlPTBGe+jCqxEk0ZLEUcEEIXiKdThbhmibTak0Nlug==",
+  "dgSpecHash": "aoc+8yUe/xwnHJEIWCcjCMrw07AyArlHHmvZpHvFab8Y4c2BWtriEt3ACfle6Sz32s3Bl1LzJdI6VVDBvradbQ==",
   "success": true,
   "projectFilePath": "D:\\Repositorio\\VisualStudio\\Order\\Order.Domain\\Order.Domain.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\55379\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
     "C:\\Users\\55379\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512"
   ],
   "logs": []

@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "BCrypt.Net-Core/1.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/BCrypt.Net-Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/BCrypt.Net-Core.dll": {}
+        }
+      },
       "FluentValidation/11.4.0": {
         "type": "package",
         "compile": {
@@ -14,6 +23,29 @@
     }
   },
   "libraries": {
+    "BCrypt.Net-Core/1.6.0": {
+      "sha512": "hsKiHGjrnlDW05MzuzzlD9gNP8YOW2KbZ+FbvISrilsKJJ76tXKhWey6psZX5sd7DczNpSU2U6ldjPoblk8BLw==",
+      "type": "package",
+      "path": "bcrypt.net-core/1.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bcrypt.net-core.1.6.0.nupkg.sha512",
+        "bcrypt.net-core.nuspec",
+        "lib/net40/BCrypt.Net-Core.dll",
+        "lib/net40/BCrypt.Net-Core.pdb",
+        "lib/net45/BCrypt.Net-Core.dll",
+        "lib/net45/BCrypt.Net-Core.pdb",
+        "lib/net451/BCrypt.Net-Core.dll",
+        "lib/net451/BCrypt.Net-Core.pdb",
+        "lib/net452/BCrypt.Net-Core.dll",
+        "lib/net452/BCrypt.Net-Core.pdb",
+        "lib/netstandard1.3/BCrypt.Net-Core.dll",
+        "lib/netstandard1.3/BCrypt.Net-Core.pdb",
+        "lib/netstandard2.0/BCrypt.Net-Core.dll",
+        "lib/netstandard2.0/BCrypt.Net-Core.pdb"
+      ]
+    },
     "FluentValidation/11.4.0": {
       "sha512": "WZJyrNf4suiaI6avVG32W9kmBLC3+V5rDTcLeRJjeU4tDmTyDIOz1459DzCKppXs34YpZg9rCUzDY3M4XxG7Ug==",
       "type": "package",
@@ -40,6 +72,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "BCrypt.Net-Core >= 1.6.0",
       "FluentValidation >= 11.4.0"
     ]
   },
@@ -87,6 +120,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "BCrypt.Net-Core": {
+            "target": "Package",
+            "version": "[1.6.0, )"
+          },
           "FluentValidation": {
             "target": "Package",
             "version": "[11.4.0, )"

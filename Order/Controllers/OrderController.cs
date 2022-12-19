@@ -16,7 +16,7 @@ namespace Order.Controllers
 
         // GET: api/<OrderController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<string> Get(int? orderId = 0,int? clientId = 0, int? userId = 0)
         {
             return new string[] { "value1", "value2" };
         }

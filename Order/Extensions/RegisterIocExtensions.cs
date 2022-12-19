@@ -14,6 +14,8 @@ namespace Order.Extensions
         {
             builder.Services.AddScoped<ITimeProvider, TimeProvider>();
             builder.Services.AddScoped<IGenerators, Generators>();
+            
+            builder.Services.AddScoped<ISecurityService, SecurityService>();
 
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 

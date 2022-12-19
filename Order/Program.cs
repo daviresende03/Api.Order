@@ -1,8 +1,6 @@
 using Order.Application.Mapper;
-using Order.Domain.Interfaces.Repositories;
 using Order.Domain.Interfaces.Repositories.DataConnector;
 using Order.Extensions;
-using Order.Infra.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 string connectionString = builder.Configuration.GetConnectionString("default");
